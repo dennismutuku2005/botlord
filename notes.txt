@@ -1,0 +1,1 @@
+const mongoURI = 'mongodb+srv://nazakenyanetwork:jXQXcWO9OCkobI8H@kai-4o.v5w9u.mongodb.net/?retryWrites=true&w=majority&appName=kai-4o';  // Replace with your MongoDB connection string
