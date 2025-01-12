@@ -3,6 +3,9 @@ const { StringSession } = require('telegram/sessions');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
+const express = require('express');  // Add Express
+const app = express();
+
 
 // MongoDB connection string
 const mongoURI = 'mongodb+srv://nazakenyanetwork:jXQXcWO9OCkobI8H@kai-4o.v5w9u.mongodb.net/?retryWrites=true&w=majority&appName=kai-4o'; // Replace with your MongoDB connection string
@@ -90,6 +93,16 @@ async function run() {
     console.error('Error during client connection or BotFather interaction:', error);
   }
 }
+
+app.get('/', (req, res) => {
+  res.send('Telegram Bot Creator Running');
+});
+
+// Start the server on port 3000
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 setInterval(() => {
     console.log('Starting bot creation process...');
