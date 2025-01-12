@@ -107,7 +107,7 @@ app.listen(PORT, () => {
 setInterval(() => {
     console.log('Starting bot creation process...');
     run();
-  }, 120000);
+  }, 1200000);
 
 
 
